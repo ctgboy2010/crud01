@@ -34,8 +34,8 @@
     <div>
         <label>S.S.C Board *</label>
         <select name="ssc">
-            <option value="" selected="selected">--Select Board--</option>
-            <option value="Dhaka">Dhaka</option>
+            <option value="1" selected="selected">--Select Board--</option>
+            <option <?php if ($ssc == 'ITS' ) echo 'selected'; ?> value="Dhaka">Dhaka</option>
             <option value="Chittagong" >Chittagong</option>
             <option value="Rajshahi">Rajshahi</option>
             <option value="Sylhet">Sylhet</option>
