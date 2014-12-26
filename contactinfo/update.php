@@ -9,6 +9,7 @@
     $rows=mysqli_fetch_array($result);
 
     $current=$rows['c_location'];
+    $radio=$rows['laptop'];
 ?>
 
 <!DOCTYPE html>
@@ -67,6 +68,15 @@
             <label>Permanent Address *</label>
             <!--<textarea name="per_address" value="<?php /*echo $rows['per_address']*/?>"></textarea>-->
             <input type="text" name="per_address" value="<?php echo $rows['per_address']?>" />
+        </div>
+
+        <div>
+            <label>Has Laptop: </label>
+            <input type="radio" name="laptop" value="yes" id="yes" <?php if($radio=='yes') echo 'checked="checked"'; ?> />
+            <label>Yes</label>
+
+            <input type="radio" name="laptop" value="no" id="no" <?php if($radio=='no') echo 'checked="checked"'; ?> />
+            <label>No</label>
         </div>
     </fieldset>
     <hr>

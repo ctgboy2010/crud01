@@ -7,7 +7,7 @@
         $update_id=$_GET['id'];
         if(isset($update_id)){
             //$_POST[mobile]', '$_POST[h_phone]', '$_POST[e_contact]', '$_POST[email]', '$_POST[a_email]', '$_POST[c_location]', '$_POST[p_address]', '$_POST[per_address]'
-            $sql = "UPDATE information SET mobile='$_POST[mobile]',h_phone='$_POST[h_phone]',e_contact='$_POST[e_contact]',email='$_POST[email]',c_location='$_POST[c_location]',p_address='$_POST[p_address]',per_address='$_POST[per_address]' WHERE id=$update_id";
+            $sql = "UPDATE information SET mobile='$_POST[mobile]',h_phone='$_POST[h_phone]',e_contact='$_POST[e_contact]',email='$_POST[email]',c_location='$_POST[c_location]',p_address='$_POST[p_address]',per_address='$_POST[per_address]',laptop='$_POST[laptop]' WHERE id=$update_id";
             mysqli_query($con,$sql);
         }
     }
@@ -41,6 +41,7 @@
             <th>Current Location</th>
             <th>Present Address</th>
             <th>Permanent Address</th>
+            <th>Laptop</th>
             <th>Action</th>
         </tr>
         </thead>
@@ -56,6 +57,7 @@
                 <td><?php echo $row['c_location'] ?></td>
                 <td><?php echo $row['p_address'] ?></td>
                 <td><?php echo $row['per_address'] ?></td>
+                <td><?php echo $row['laptop'] ?></td>
                 <td><a href="view.php?id=<?php echo $row['id']?>">View</a> / <a href="update.php?id=<?php echo $row['id']?>">Edit</a> / <a href="delete.php?id=<?php echo $row['id'] ?>" onclick="return confirm('Are you sure want to delete id = <?php echo $row['id'] ?> ?');">Delete</a></td>
             </tr>
         <?php } ?>

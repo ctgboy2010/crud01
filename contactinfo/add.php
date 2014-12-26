@@ -3,8 +3,8 @@
 
 $con=mysqli_connect("localhost","root","lict@2","contactinfo") or die("Error: ".mysqli_error($con));
 
-$query="INSERT INTO `contactinfo`.`information` (`id` ,`mobile` ,`h_phone` ,`e_contact` ,`email` ,`a_email` ,`c_location` ,`p_address` ,`per_address`)
-        VALUES ('', '$_POST[mobile]', '$_POST[h_phone]', '$_POST[e_contact]', '$_POST[email]', '$_POST[a_email]', '$_POST[c_location]', '$_POST[p_address]', '$_POST[per_address]');";
+$query="INSERT INTO `contactinfo`.`information` (`id` ,`mobile` ,`h_phone` ,`e_contact` ,`email` ,`a_email` ,`c_location` ,`p_address` ,`per_address`,`laptop`)
+        VALUES ('', '$_POST[mobile]', '$_POST[h_phone]', '$_POST[e_contact]', '$_POST[email]', '$_POST[a_email]', '$_POST[c_location]', '$_POST[p_address]', '$_POST[per_address]','$_POST[laptop]');";
 
 if(mysqli_query($con,$query))
     echo "Successfully added 1 data into database";
