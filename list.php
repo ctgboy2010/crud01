@@ -5,7 +5,7 @@
         $update_id=$_GET['id'];
         if(isset($update_id)){
             $sql = "UPDATE users SET first_name='$_POST[fname]',last_name='$_POST[lname]',phone_number='$_POST[pnumber]' WHERE id=$update_id";
-            mysqli_query($con,$sql);
+            mysqli_query($con,$
         }
     }
     $query="SELECT * FROM users";
