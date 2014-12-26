@@ -1,4 +1,6 @@
 <?php
+    //This is a crud application with add.php file
+
 $con=mysqli_connect("localhost","root","lict@2","contactinfo") or die("Error: ".mysqli_error($con));
 
 $query="INSERT INTO `contactinfo`.`information` (`id` ,`mobile` ,`h_phone` ,`e_contact` ,`email` ,`a_email` ,`c_location` ,`p_address` ,`per_address`)

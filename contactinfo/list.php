@@ -1,4 +1,6 @@
 <?php
+    //This is a crud application with list.php file
+
     $con=mysqli_connect("localhost","root","lict@2","contactinfo") or die("Error: ".mysqli_error($con));
 
     if(isset($_POST['update'])){
